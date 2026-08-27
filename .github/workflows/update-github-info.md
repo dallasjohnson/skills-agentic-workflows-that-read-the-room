@@ -1,27 +1,20 @@
 ---
 name: update-github-info
 on:
-  schedule: daily
-  workflow_dispatch: {}
-permissions:
-  contents: write
-  pull-requests: write
+  workflow_dispatch:
+  schedule:
+    - cron: '17 9 * * *'
 tools:
-  edit: true
-  web-fetch: true
-  github:
-    toolsets: [default]
+  edit:
+  web-fetch:
 network:
   allowed:
-    - github.blog
     - github.com
+    - github.blog
 safe-outputs:
   create-pull-request:
     title-prefix: "[ai] "
-    reviewers: [mona]
-    draft: false
-    allowed-files:
-      - site/content/github-info.md
+    draft: true
 ---
 
 Read `notes/mona-notes.md` to understand Mona's editorial guidelines for the website.
