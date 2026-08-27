@@ -14,8 +14,9 @@ network:
     - awesome-copilot.github.com
 safe-outputs:
   create-pull-request:
-    title-prefix: "[ai] "
+    title-prefix: "[mona]"
     draft: true
+    fallback-as-issue: false
 ---
 
 Read `notes/mona-notes.md` to understand Mona's editorial guidelines for the website.
